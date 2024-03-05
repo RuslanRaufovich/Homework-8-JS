@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Домашка 8</title>
+  </head>
+  <body>
+    
+    <fieldset>
+      <h2>Введите длину окружности и периметр квадрата</h2>
+      <input
+        class="input1"
+        type="number"
+        min="0"
+        placeholder="Введите длину окружности"
+      />
+      <input
+        class="input2"
+        type="number"
+        min="0"
+        placeholder="Введите периметр квадрата"
+      />
+      <button class="button">Go</button>
+      <hr />
+      <h2 class="result"></h2>
+    </fieldset>   
+        <script>   
+        let inputCircle = document.querySelector(".input1");
+let inputSquare = document.querySelector(".input2");
+let button = document.querySelector(".button");
+
+button.onclick = function () {
+  let circleD = +inputCircle.value / 3.14;
+  let squareS = +inputSquare.value / 4;
+  if (circleD <= squareS) {
+    console.log("Данный круг поместится в квадрат");
+    document.querySelector(".result").innerHTML =
+      "Данный круг поместится в квадрат";
+  } else {
+    console.log("Данный круг не поместится в квадрат");
+    document.querySelector(".result").innerHTML =
+      "Данный круг не поместится в квадрат";
+  }
+};
+      </script>
+  </body>
+</html>
